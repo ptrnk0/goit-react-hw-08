@@ -1,0 +1,9 @@
+.searchInput {
+    outline: none;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+}

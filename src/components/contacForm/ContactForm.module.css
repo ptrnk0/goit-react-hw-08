@@ -1,0 +1,54 @@
+.contactFormContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 6px 0;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.contactFormContainer::after {
+    content: "";
+    border-bottom: 4px solid dimgray;
+    padding-top: 40px;
+    border-radius: 4px;
+}
+
+.contactFormContainer button {
+    cursor: pointer;
+    border: none;
+    background-color: dimgray;
+    border-radius: 4px;
+    height: 30px;
+    width: 50px
+}
+
+.contactFormContainer form {
+    display: flex;
+    gap: 20px;
+}
+
+.fieldContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.fieldContainer span {
+    color: red;
+    font-size: 13px;
+    position: absolute;
+    top: 30px
+}
+
+.fieldContainer input {
+    border: none;
+    border-bottom: solid 2px black;
+    outline: none;
+    text-align: center;
+}
+
+.fieldContainer input::placeholder {
+    text-align: center;
+}
