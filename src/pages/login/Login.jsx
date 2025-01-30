@@ -23,7 +23,7 @@ const Login = () => {
 	return (
 		<Formik initialValues={initialValues} onSubmit={handleSubmit}>
 			<Form
-				className="rounded-lg shadow-md w-md flex flex-col justify-center px-8 py-4 gap-6
+				className="rounded-lg shadow-md w-md flex flex-col justify-center px-8 py-4 gap-4
             absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 			>
 				<label className="">
