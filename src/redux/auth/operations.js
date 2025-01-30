@@ -35,7 +35,7 @@ export const authLogout = createAsyncThunk(
 	"auth/logout",
 	async (_, thunkApi) => {
 		try {
-			const { data } = await contactsApi("/users/logout");
+			const { data } = await contactsApi.post("/users/logout");
 			return data;
 		} catch (error) {
 			thunkApi.rejectWithValue(error.message);
