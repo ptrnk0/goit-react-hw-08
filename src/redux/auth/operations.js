@@ -30,3 +30,15 @@ export const authLogin = createAsyncThunk(
 		}
 	}
 );
+
+export const authLogout = createAsyncThunk(
+	"auth/logout",
+	async (_, thunkApi) => {
+		try {
+			const { data } = await contactsApi("/users/logout");
+			return data;
+		} catch (error) {
+			thunkApi.rejectWithValue(error.message);
+		}
+	}
+);
