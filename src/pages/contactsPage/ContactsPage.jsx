@@ -5,6 +5,7 @@ import SearchBox from "../../components/searchBox/SearchBox";
 import { useEffect } from "react";
 import { fetchContacts } from "../../redux/contacts/operations";
 import { selectError, selectLoading } from "../../redux/contacts/selectors";
+import Loader from "../../components/loader/Loader";
 
 const Contacts = () => {
 	const dispatch = useDispatch();
@@ -16,13 +17,17 @@ const Contacts = () => {
 	}, [dispatch]);
 
 	return (
-		<>
+		<div className="flex gap-12">
 			<ContactForm />
-			<SearchBox />
-			{error && <p>Something went wrong.</p>}
-			{isLoading && <p>Loading...</p>}
-			<ContactList />
-		</>
+			<div className="grow-1">
+				<SearchBox />
+				<div className="flex items-center flex-col relative">
+					{error && <p>Something went wrong.</p>}
+					{isLoading && <Loader />}
+					<ContactList />
+				</div>
+			</div>
+		</div>
 	);
 };
 

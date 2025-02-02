@@ -24,36 +24,47 @@ const ContactForm = () => {
 	};
 
 	return (
-		<div>
-			<h2>Add contact</h2>
-			<Formik
-				initialValues={initialValues}
-				validationSchema={contactFormSchema}
-				onSubmit={handleSubmit}
-			>
-				<Form>
-					<div>
-						<Field type="text" name="name" placeholder="Name" />
-						<ErrorMessage
-							name="name"
-							component="span"
-						></ErrorMessage>
-					</div>
-					<div>
-						<Field
-							type="text"
-							name="number"
-							placeholder="Phone number"
-						/>
-						<ErrorMessage
-							name="number"
-							component="span"
-						></ErrorMessage>
-					</div>
-					<button type="submit">Add</button>
-				</Form>
-			</Formik>
-		</div>
+		<Formik
+			initialValues={initialValues}
+			validationSchema={contactFormSchema}
+			onSubmit={handleSubmit}
+		>
+			<Form>
+				<fieldset className="fieldset w-50 bg-base-200 shadow-lg p-4 rounded-box">
+					<legend end className="fieldset-legend">
+						Add contact
+					</legend>
+
+					<label className="fieldset-label" htmlFor="name">
+						Name
+					</label>
+					<Field
+						id="name"
+						type="text"
+						name="name"
+						placeholder="Name"
+						className="input"
+					/>
+					<ErrorMessage name="name" component="span"></ErrorMessage>
+
+					<label className="fieldset-label" htmlFor="number">
+						Phone number
+					</label>
+					<Field
+						id="number"
+						type="text"
+						name="number"
+						placeholder="Phone number"
+						className="input"
+					/>
+					<ErrorMessage name="number" component="span"></ErrorMessage>
+
+					<button className="btn btn-neutral mt-4" type="submit">
+						Add
+					</button>
+				</fieldset>
+			</Form>
+		</Formik>
 	);
 };
 

@@ -11,12 +11,20 @@ const SearchBox = () => {
 	};
 
 	return (
-		<input
-			type="text"
-			placeholder="Find contacts by name"
-			value={filter}
-			onInput={(evt) => handleInput(evt.target.value.trim())}
-		/>
+		<div>
+			<fieldset className="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+				<legend className="fieldset-legend">
+					Search contacts by name
+				</legend>
+				<input
+					type="text"
+					placeholder="Find contacts by name"
+					value={filter}
+					onInput={(evt) => handleInput(evt.target.value.trim())}
+					className="input"
+				/>
+			</fieldset>
+		</div>
 	);
 };
 

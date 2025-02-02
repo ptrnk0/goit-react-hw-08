@@ -4,15 +4,20 @@ import "./index.css";
 import "modern-normalize";
 import App from "./components/app/App";
 import { Provider } from "react-redux";
-import store from "./redux/store";
+import { store, persistor } from "./redux/store";
 import { BrowserRouter } from "react-router";
+import { PersistGate } from "redux-persist/integration/react";
+import { Toaster } from "react-hot-toast";
 
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
 		<Provider store={store}>
-			<BrowserRouter>
-				<App />
-			</BrowserRouter>
+			<PersistGate loading={null} persistor={persistor}>
+				<BrowserRouter>
+					<App />
+					<Toaster />
+				</BrowserRouter>
+			</PersistGate>
 		</Provider>
 	</StrictMode>
 );

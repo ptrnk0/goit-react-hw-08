@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@plugin "daisyui" {
+    themes: corporate --default;
+}
+
 @theme {
     --font-display: "Oswald", "sans-serif";
 }

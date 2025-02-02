@@ -1,14 +1,14 @@
 import { Outlet } from "react-router";
-import Header from "../header/Header";
+import AppBar from "../appBar/AppBar";
 
 const Layout = () => {
 	return (
-		<>
-			<Header />
-			<main className="font-display">
+		<div className="flex flex-col h-screen">
+			<AppBar />
+			<main className="font-display px-10 mt-10 grow">
 				<Outlet />
 			</main>
-		</>
+		</div>
 	);
 };
 
