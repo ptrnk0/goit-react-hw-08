@@ -5,7 +5,7 @@ const Home = () => {
     <div
       className="hero h-full rounded-xl overflow-hidden"
       style={{
-        backgroundImage: 'url("/public/6227297.webp")',
+        backgroundImage: 'url("/6227297.webp")',
       }}
     >
       <div className="hero-overlay "></div>
